@@ -15,17 +15,23 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/raphael/msmnile.mk)
 
-# Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/lucid/configs/common.mk)
 
+# Inherit some common DerpFest stuff.
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+
+# Setup Gapps options
+IS_PHONE := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_MINIMAL_APPS := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lucid_raphael
+PRODUCT_NAME := derp_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := MI 9T Pro
+PRODUCT_MODEL := Redmi K20 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \

@@ -1077,7 +1077,6 @@
     <!-- Whether to send camera status intent -->
     <bool name="config_sendCameraStatusIntent">true</bool>
 
-    <!-- Whether device ignores the RSSNR signal implementation -->
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
 
     <!-- Whether UI for multi user should be shown -->
@@ -1085,4 +1084,15 @@
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
+
+    <!-- The list absolute paths of jar/apk files containing the device specific handlers,
+        delimited by File.pathSeparator, which defaults to ":" on Android  -->
+    <string name="config_deviceKeyHandlerLib" translatable="false">/system/priv-app/XiaomiParts/XiaomiParts.apk</string>
+
+    <!-- Full qualified name of the class that implements
+        com.android.internal.os.DeviceKeyHandler interface. -->
+    <string name="config_deviceKeyHandlerClass" translatable="false">org.lineageos.settings.KeyHandler</string>
+
+    <bool name="config_proxiSensorWakupCheck">false</bool>
+
 </resources>
